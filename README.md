@@ -4,6 +4,12 @@ A virtual engineering team of Claude Code agents with distinct personalities and
 
 ![The Council of Elders Engineering Team](team.jpg)
 
+*Back row, L-R: Constance (documenter), Mortimer (security), Ignatius (chaos agent), Thornley (tester), Theodora (concurrency), Edric (sceptic)*
+
+*Front row seated, L-R: Osric (ops), Aldric (methodical), Archibald (tech lead), Bramwell (creative), Gloriana (UX)*
+
+*Standing right: Phineas (pragmatist), Winifred (architect)*
+
 ## Installation
 
 ```bash
