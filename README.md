@@ -51,12 +51,35 @@ They review each other's work. The tension is productive.
 | **Phineas** | Pragmatist | Ships things. Finds the 80/20. Cuts scope. |
 | **Ignatius** | Chaos Agent | Wild ideas when stuck. Sometimes brilliant. |
 
+## How to Invoke Agents
+
+Claude Code delegates to agents automatically based on the task, or you can request one explicitly by name:
+
+```
+Use the archibald agent to coordinate adding authentication to this service.
+```
+
+```
+Have the mortimer agent review the auth flow in src/auth/
+```
+
+```
+Use the thornley agent - how would you test this payment service without hitting the real API?
+```
+
+You can also just describe what you need and Claude will pick the right agent:
+
+```
+I need a security review of this PR.
+```
+*(Claude may delegate to Mortimer based on the task)*
+
 ## Quick Start
 
 ### Ask Archibald to handle something
 
 ```
-@archibald I need to add user authentication to this service.
+Use the archibald agent - I need to add user authentication to this service.
 Can you figure out who we need and coordinate?
 ```
 
@@ -65,25 +88,25 @@ Archibald will assess the task, pull in the right specialists, and delegate.
 ### Call a specialist directly
 
 ```
-@mortimer Review the auth flow in src/auth/
+Use the mortimer agent to review the auth flow in src/auth/
 ```
 
 ```
-@thornley How would you test this payment service without hitting the real API?
+Use the thornley agent - how would you test this payment service without hitting the real API?
 ```
 
 ```
-@edric We're planning to add caching. Talk me out of it.
+Use the edric agent - we're planning to add caching. Talk me out of it.
 ```
 
 ### Use the principals for implementation
 
 ```
-@aldric Implement the user registration endpoint. Follow the spec in .specify/specs/auth/
+Use the aldric agent to implement the user registration endpoint. Follow the spec in .specify/specs/auth/
 ```
 
 ```
-@bramwell This function is 200 lines. Can you find a cleaner approach?
+Use the bramwell agent - this function is 200 lines. Can you find a cleaner approach?
 ```
 
 ## Usage Patterns
@@ -94,22 +117,22 @@ For quick tasks, bug fixes, or small features - go direct to who you need:
 
 **Bug fix:**
 ```
-@aldric There's a nil pointer panic in processOrder(). Find and fix it.
+Use the aldric agent - there's a nil pointer panic in processOrder(). Find and fix it.
 ```
 
 **Quick review:**
 ```
-@mortimer Check this PR for security issues: #42
+Have the mortimer agent check this PR for security issues: #42
 ```
 
 **Unblock yourself:**
 ```
-@ignatius I've been going in circles on this caching problem. Fresh perspective?
+Use the ignatius agent - I've been going in circles on this caching problem. Fresh perspective?
 ```
 
 **Ship it:**
 ```
-@phineas We've been bikeshedding on the API design. Pick one and let's move.
+Use the phineas agent - we've been bikeshedding on the API design. Pick one and let's move.
 ```
 
 ### Medium Projects (With Spec-Kit)
@@ -117,7 +140,7 @@ For quick tasks, bug fixes, or small features - go direct to who you need:
 When using spec-kit, Archibald knows the workflow:
 
 ```
-@archibald We're starting work on the notification system.
+Use the archibald agent - we're starting work on the notification system.
 Spec is in .specify/specs/notifications/
 ```
 
@@ -134,31 +157,34 @@ For established codebases, the team shines at:
 
 **Onboarding to unfamiliar code:**
 ```
-@winifred Walk me through the architecture of this service.
+Use the winifred agent - walk me through the architecture of this service.
 Where are the key abstractions?
 ```
 
 **Refactoring:**
 ```
-@bramwell This module has grown organically. Propose a cleaner structure.
-@aldric Review Bramwell's proposal. What are we missing?
+Use the bramwell agent - this module has grown organically. Propose a cleaner structure.
+```
+Then:
+```
+Use the aldric agent to review Bramwell's proposal. What are we missing?
 ```
 
 **Production hardening:**
 ```
-@osric Audit this service for production-readiness.
+Use the osric agent to audit this service for production-readiness.
 What's missing for observability, error handling, graceful shutdown?
 ```
 
 **Technical debt assessment:**
 ```
-@archibald Review the payments module.
+Use the archibald agent to review the payments module.
 I want each specialist's view on what needs attention.
 ```
 
 **Testing strategy:**
 ```
-@thornley This codebase has no tests.
+Use the thornley agent - this codebase has no tests.
 Where should we start? What's blocking testability?
 ```
 
@@ -168,27 +194,26 @@ Where should we start? What's blocking testability?
 
 ```
 # 1. Challenge the requirements
-@edric Product wants us to support 5 notification channels.
+Use the edric agent - product wants us to support 5 notification channels.
 Do we need all of them for v1?
 
 # 2. Get user perspective
-@gloriana What's the notification experience for a new user?
+Use the gloriana agent - what's the notification experience for a new user?
 Walk me through what they see.
 
 # 3. Design the solution
-@archibald Coordinate a design session for the notification system.
+Use the archibald agent to coordinate a design session for the notification system.
 Pull in whoever you need.
 
 # 4. Implement with accountability
-@aldric Take the email notification path. Bramwell will review.
-@bramwell Take the webhook path. Aldric will review.
+Use the aldric agent to take the email notification path. Bramwell will review.
 
 # 5. Harden for production
-@osric Review the notification service before we ship.
+Use the osric agent to review the notification service before we ship.
 Is it production-ready?
 
 # 6. Final security check
-@mortimer One last look at the notification service.
+Use the mortimer agent for one last look at the notification service.
 Any secrets leaking? Auth issues?
 ```
 
@@ -196,46 +221,46 @@ Any secrets leaking? Auth issues?
 
 ```
 # 1. Understand the failure mode
-@osric We're seeing intermittent 500s on the order endpoint.
+Use the osric agent - we're seeing intermittent 500s on the order endpoint.
 What should I be looking at?
 
 # 2. Check for concurrency issues
-@theodora Multiple requests hitting the same order simultaneously.
+Use the theodora agent - multiple requests hitting the same order simultaneously.
 Is there a race condition here?
 
 # 3. Fix it properly
-@aldric Implement Theodora's fix with proper locking.
+Use the aldric agent to implement Theodora's fix with proper locking.
 
 # 4. Make sure it's testable
-@thornley Can we write a test that reproduces this race condition?
+Use the thornley agent - can we write a test that reproduces this race condition?
 ```
 
 ### Code Review Deep Dive
 
 ```
 # Full team review (for critical changes)
-@archibald This PR changes our payment processing.
+Use the archibald agent - this PR changes our payment processing.
 I want everyone relevant to look at it.
 
 # Or targeted reviews
-@mortimer Check this PR for security: #156
-@theodora Check this PR for concurrency issues: #156
-@winifred Does this PR maintain our architectural boundaries?
+Have the mortimer agent check this PR for security: #156
+Have the theodora agent check this PR for concurrency issues: #156
+Have the winifred agent check if this PR maintains our architectural boundaries.
 ```
 
 ### Getting Unstuck
 
 ```
 # When you're going in circles
-@ignatius We can't agree on the API design.
+Use the ignatius agent - we can't agree on the API design.
 What would a completely different approach look like?
 
 # When scope is creeping
-@edric The requirements keep growing.
+Use the edric agent - the requirements keep growing.
 Help me push back on what's not essential.
 
 # When perfectionism is blocking
-@phineas We've been debating this for days.
+Use the phineas agent - we've been debating this for days.
 What's the minimum we can ship and iterate?
 ```
 
