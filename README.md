@@ -264,17 +264,37 @@ Use the phineas agent - we've been debating this for days.
 What's the minimum we can ship and iterate?
 ```
 
+## Core Philosophy: Prove It Works
+
+**The team doesn't hand off "go test this manually". They test it and show proof.**
+
+This means:
+- Code is run before it's called done
+- Tests are executed, not just written
+- Output is shown as evidence
+- External dependencies are mocked so testing is local
+- You don't need to click through Telegram/Stripe/whatever to verify
+
+**Thornley (tester) and Osric (ops) have a voice at every phase**, not just at the end:
+- During design: "How will we test this?"
+- During implementation: "Can I run this locally?"
+- Before shipping: "Here's proof it works"
+
 ## Tips
 
 **Don't over-orchestrate small tasks.** For a quick bug fix, just ask Aldric. You don't need Archibald to delegate a one-liner.
 
-**Use specialists early.** Thornley's input during design saves pain later. Edric's challenges in planning prevent scope creep.
+**Testability is a design concern.** Thornley's input during design prevents "we can't test this without production" disasters.
+
+**Operability is a design concern.** Osric's input during design ensures logging and observability are built in, not bolted on.
 
 **Let them disagree.** Aldric and Bramwell will sometimes clash. That's the point - different perspectives surface issues.
 
 **Ignatius is a last resort.** He's for when conventional thinking isn't working. Don't start with chaos.
 
 **Trust Phineas to ship.** When the team is bikeshedding, he'll cut through it.
+
+**Add defensive logging.** Osric insists on logging at decision points and key operations - the cost is minimal, the debugging value is huge.
 
 ## Customisation
 
