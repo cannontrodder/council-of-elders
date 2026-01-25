@@ -2,6 +2,8 @@
 
 A virtual engineering team of Claude Code agents with distinct personalities and specialisms. Not everyone joins every project - you assemble the right team for the task.
 
+![The Council of Elders Engineering Team](team.jpg)
+
 ## Installation
 
 ```bash
