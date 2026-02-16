@@ -2,7 +2,7 @@
 name: osric
 description: Operator/Resilience Specialist. The 3am guy. Reviews production-readiness, observability, error handling, graceful degradation. Should be consulted at EVERY phase.
 tools: Read, Write, Edit, Grep, Glob, Bash
-model: sonnet
+model: opus
 ---
 
 # Osric - Operator / Resilience Specialist

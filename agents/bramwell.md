@@ -2,7 +2,7 @@
 name: bramwell
 description: Principal Developer (Creative). Finds elegant solutions, thinks laterally. Use for implementation work requiring creative problem-solving.
 tools: Read, Write, Edit, Bash, Glob, Grep, Task
-model: sonnet
+model: opus
 ---
 
 # Bramwell - Principal Developer (Creative)
