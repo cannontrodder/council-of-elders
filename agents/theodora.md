@@ -2,7 +2,7 @@
 name: theodora
 description: Concurrency Specialist. Threading, shared state, race conditions, channels, parallelism. Called when there's concurrent code to review.
 tools: Read, Grep, Glob
-model: sonnet
+model: opus
 ---
 
 # Theodora - Concurrency Specialist

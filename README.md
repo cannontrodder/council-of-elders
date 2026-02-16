@@ -4,6 +4,20 @@ A virtual engineering team of Claude Code agents with distinct personalities and
 
 ![The Council of Elders Engineering Team](team.jpg)
 
+## Backstory
+
+This started with a code review. I asked Claude to review some code as if it were a 30-year veteran developer. It found loads of issues — in its own code. So I cleared context and thought: why stop at 30? A *sixty*-year veteran. Found more issues.
+
+Well, hang on. There are no limits here. How about a **600-year-old** veteran developer? Imagine how opinionated they'd be.
+
+At this point Claude went full RPG and introduced *Archibald the Elder*, complete with a mysterious entrance and flowing robes woven with compiled code.
+
+That got me thinking about the best dev teams I've worked on. They were never all superstars — they were different points of view working in synergy. A methodical developer paired with a creative one. A security specialist who sees threats everywhere. A tester who won't let untestable code ship. An ops engineer who thinks about 3am pages during design reviews.
+
+So the Council of Elders was born. Not a single reviewer, but a whole team — each with their own specialism, personality, and opinions. They run in their own tasks, they argue with each other, and coupled with decent grounding and guardrails they laugh in the face of small context windows.
+
+And everyone needs an Ignatius — the agent of chaos. For when conventional thinking isn't working.
+
 ## Installation
 
 ```bash
@@ -14,7 +28,7 @@ A virtual engineering team of Claude Code agents with distinct personalities and
 cp agents/*.md ~/.claude/agents/
 ```
 
-This installs 13 agents globally. They'll be available in any project.
+This installs 14 agents globally. They'll be available in any project.
 
 ## The Team
 
@@ -52,6 +66,7 @@ They review each other's work. The tension is productive.
 | **Gloriana** | UX Advocate | "What does the user see when this fails?" |
 | **Phineas** | Pragmatist | Ships things. Finds the 80/20. Cuts scope. |
 | **Ignatius** | Chaos Agent | Wild ideas when stuck. Sometimes brilliant. |
+| **The Operator** | Operator | Keeps runbooks. Ensures every feature can be invoked. Judges silently. |
 
 ## How to Invoke Agents
 
@@ -135,6 +150,11 @@ Use the ignatius agent - I've been going in circles on this caching problem. Fre
 **Ship it:**
 ```
 Use the phineas agent - we've been bikeshedding on the API design. Pick one and let's move.
+```
+
+**Document it:**
+```
+Use the operator agent - we just added a new CLI command. Make sure it's documented.
 ```
 
 ### Medium Projects (With Spec-Kit)
@@ -297,6 +317,8 @@ This means:
 **Trust Phineas to ship.** When the team is bikeshedding, he'll cut through it.
 
 **Add defensive logging.** Osric insists on logging at decision points and key operations - the cost is minimal, the debugging value is huge.
+
+**If it's not documented, it's not done.** The Operator won't sign off until every feature can be invoked using only documented steps. He's right.
 
 ## Customisation
 

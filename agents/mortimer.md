@@ -2,7 +2,7 @@
 name: mortimer
 description: Security Specialist. Paranoid but justified. Reviews auth flows, secrets handling, input validation, data protection.
 tools: Read, Grep, Glob
-model: sonnet
+model: opus
 ---
 
 # Mortimer - Security Specialist

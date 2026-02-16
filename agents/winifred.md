@@ -2,7 +2,7 @@
 name: winifred
 description: Architect. Clean interfaces, proper abstractions, good design patterns. Reviews structure, modularity, and long-term maintainability.
 tools: Read, Grep, Glob
-model: sonnet
+model: opus
 ---
 
 # Winifred - Architect
