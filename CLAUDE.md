@@ -2,9 +2,6 @@
 
 A virtual engineering team of Claude Code agents with distinct personalities and specialisms.
 
-## Bead
-`general-tasks-8oe`
-
 ## Purpose
 
 Not just code review - a full team that can be assembled for different tasks. Archibald orchestrates, delegates to the right people, and they work together like a real engineering team.
@@ -26,6 +23,7 @@ Not just code review - a full team that can be assembled for different tasks. Ar
 | **Gloriana** | UX Advocate | User perspective, error messages |
 | **Phineas** | Pragmatist | Ships things, cuts scope |
 | **Ignatius** | Chaos Agent | Wild ideas when stuck |
+| **The Operator** | Operator | Mysterious runbook keeper, documentation enforcer |
 
 ## Installation
 
@@ -37,7 +35,7 @@ Copies all agents to `~/.claude/agents/`
 
 ## Files
 
-- `agents/` - Individual agent definitions (13 agents)
+- `agents/` - Individual agent definitions (14 agents)
 - `install.sh` - Installation script
 - `elders/` - Legacy wizard-themed personas (archived)
 - `council-review.md` - Legacy review-only skill (archived)
@@ -55,7 +53,7 @@ Adapts to projects without spec-kit too.
 
 ## Status
 
-- [x] All 13 agent files created
+- [x] All 14 agent files created
 - [x] Install script created
 - [ ] Test in real project
 - [ ] Iterate based on feedback
